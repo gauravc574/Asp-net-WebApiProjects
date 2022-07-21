@@ -5,14 +5,25 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using WebAPIDemoForCrud.Models;
+using WebAPIDemoForCRUD.DAL;
 
 namespace WebAPIDemoForCrud.Controllers
 {
     public class StudentController : ApiController
     {
-        public StudentController()
+        private IStudentRepository _repo = null;
+        //public StudentController()
+        //{
+        //}
+
+        public StudentController(IStudentRepository repo)
         {
+            _repo = repo;
         }
+
+        
+
+        
 
         public IHttpActionResult GetAllStudents(bool includeAddress = false)
         {
@@ -42,6 +53,7 @@ namespace WebAPIDemoForCrud.Controllers
 
             return Ok(students);
         }
+
 
         public IHttpActionResult GetStudentById(int id)
         {
