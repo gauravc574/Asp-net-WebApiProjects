@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebAPIDemoForCRUD.DAL
+namespace WebAPIDemoForCRUD.Repositories
 {
     public class StudentRepository : IStudentRepository
     {

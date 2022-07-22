@@ -5,7 +5,8 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using WebAPIDemoForCrud.Models;
-using WebAPIDemoForCRUD.DAL;
+using WebAPIDemoForCRUD.Repositories;
+
 
 namespace WebAPIDemoForCrud.Controllers
 {
